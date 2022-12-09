@@ -1,3 +1,5 @@
+package Singleton
+
 class Singleton private constructor() {
     companion object {
         @Volatile
@@ -12,9 +14,9 @@ class Singleton private constructor() {
 
         /*
         @JvmStatic
-        fun getInstance(): Singleton =
+        fun getInstance(): Singleton.Singleton =
             instance ?: synchronized(this) {
-                instance ?: Singleton().also {
+                instance ?: Singleton.Singleton().also {
                     instance = it
                 }
             }
